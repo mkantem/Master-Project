@@ -11,6 +11,7 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link grammar.Rule#getParentGrammar <em>Parent Grammar</em>}</li>
  *   <li>{@link grammar.Rule#getLhs <em>Lhs</em>}</li>
@@ -19,7 +20,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link grammar.Rule#getPriority <em>Priority</em>}</li>
  *   <li>{@link grammar.Rule#getEmbeddingMechanism <em>Embedding Mechanism</em>}</li>
  * </ul>
- * </p>
  *
  * @see grammar.GrammarPackage#getRule()
  * @model
@@ -189,5 +189,9 @@ public interface Rule extends EObject {
 	 * @generated
 	 */
 	void setEmbeddingMechanism(Embedding value);
+	
+	public  void zeroMarkRule();
+	public  void unMarkRule();
+	public  int Mark();
 
 } // Rule

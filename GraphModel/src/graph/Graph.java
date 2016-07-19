@@ -11,11 +11,11 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link graph.Graph#getNodes <em>Nodes</em>}</li>
  *   <li>{@link graph.Graph#getEdges <em>Edges</em>}</li>
  * </ul>
- * </p>
  *
  * @see graph.GraphPackage#getGraph()
  * @model

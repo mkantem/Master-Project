@@ -25,12 +25,12 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link grammar.impl.ConnexionInstructionImpl#getParentEmbedding <em>Parent Embedding</em>}</li>
  *   <li>{@link grammar.impl.ConnexionInstructionImpl#getM <em>M</em>}</li>
  *   <li>{@link grammar.impl.ConnexionInstructionImpl#getD <em>D</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -314,7 +314,7 @@ public class ConnexionInstructionImpl extends MinimalEObjectImpl.Container imple
 	 */
 	@Override
 	public String toString() {
-		if (eIsProxy()) return super.toString();
+		
 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (m: ");

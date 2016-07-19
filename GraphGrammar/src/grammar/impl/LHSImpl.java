@@ -25,11 +25,11 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link grammar.impl.LHSImpl#getParentRule <em>Parent Rule</em>}</li>
  *   <li>{@link grammar.impl.LHSImpl#getNode <em>Node</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -253,6 +253,13 @@ public class LHSImpl extends MinimalEObjectImpl.Container implements LHS {
 				return node != null;
 		}
 		return super.eIsSet(featureID);
+	}
+	public String toString() 
+	{
+		StringBuffer buffer= new StringBuffer(); 	// TODO Auto-generated method stub
+	    buffer.append(this.getNode().toString());
+		
+		return buffer.toString();
 	}
 
 } //LHSImpl

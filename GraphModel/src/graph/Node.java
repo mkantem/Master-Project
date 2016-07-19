@@ -11,12 +11,12 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link graph.Node#getParent <em>Parent</em>}</li>
  *   <li>{@link graph.Node#getOutgoingEdges <em>Outgoing Edges</em>}</li>
  *   <li>{@link graph.Node#getIngoingEdges <em>Ingoing Edges</em>}</li>
  * </ul>
- * </p>
  *
  * @see graph.GraphPackage#getNode()
  * @model
@@ -86,5 +86,9 @@ public interface Node extends Typed {
 	 * @generated
 	 */
 	EList<Edge> getIngoingEdges();
+
+	public  void markNode();
+	public  void unMarkNode();
+	public  int Mark();
 
 } // Node

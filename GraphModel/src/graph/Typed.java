@@ -10,10 +10,10 @@ package graph;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link graph.Typed#getType <em>Type</em>}</li>
  * </ul>
- * </p>
  *
  * @see graph.GraphPackage#getTyped()
  * @model abstract="true"

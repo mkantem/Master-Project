@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.commands">
+      <category
+            name="Sample Category"
+            id="Graph-Grammar--plugins.commands.category">
+      </category>
+      <command
+            name="Sample Command"
+            categoryId="Graph-Grammar--plugins.commands.category"
+            id="Graph-Grammar--plugins.commands.sampleCommand">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            commandId="Graph-Grammar--plugins.commands.sampleCommand"
+            class="graphgrammarplugins.handlers.MsgHandler">
+      </handler>
+   </extension>
+   <extension
+         point="org.eclipse.ui.bindings">
+      <key
+            commandId="Graph-Grammar--plugins.commands.sampleCommand"
+            contextId="org.eclipse.ui.contexts.window"
+            sequence="M1+6"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration">
+      </key>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="menu:org.eclipse.ui.main.menu?after=additions">
+         <menu
+               label="Sample Menu"
+               mnemonic="M"
+               id="Graph-Grammar--plugins.menus.sampleMenu">
+            <command
+                  commandId="Graph-Grammar--plugins.commands.sampleCommand"
+                  mnemonic="S"
+                  id="Graph-Grammar--plugins.menus.sampleCommand">
+            </command>
+         </menu>
+      </menuContribution>
+      <menuContribution
+            locationURI="toolbar:org.eclipse.ui.main.toolbar?after=additions">
+         <toolbar
+               id="Graph-Grammar--plugins.toolbars.sampleToolbar">
+            <command
+                  commandId="Graph-Grammar--plugins.commands.sampleCommand"
+                  icon="icons/sample.gif"
+                  tooltip="Say hello world"
+                  id="Graph-Grammar--plugins.toolbars.sampleCommand">
+            </command>
+         </toolbar>
+      </menuContribution>
+   </extension>
+
+</plugin>

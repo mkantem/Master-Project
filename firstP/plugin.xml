@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="false"
+            locationURI="menu:org.eclipse.ui.main.menu?after=additions">
+         <menu
+               id="GraphTransformation"
+               label="Graph grammar"
+               mnemonic="g">
+            <command
+                  commandId="executeRuleCommand"
+                  hoverIcon="Icon/run.GIF"
+                  icon="Icon/run.GIF"
+                  label="Executer une regle"
+                  mnemonic="r"
+                  style="push">
+            </command>
+            <command
+                  commandId="ShowGraphCommand"
+                  icon="Icon/open.GIF"
+                  label="Show a Graph"
+                  mnemonic="G"
+                  style="push">
+            </command>
+         </menu>
+      </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <category
+            id="firstP.graphg"
+            name="grammairedegraphe">
+      </category>
+      <command
+            category="firstP.graphg"
+            description="Execution d&apos;une règle"
+            id="executeRuleCommand"
+            name="ExecuteRule">
+      </command>
+      <command
+            category="firstP.graphg"
+            description="Affichage d&apos;un graphe"
+            id="ShowGraphCommand"
+            name="ShowGraph">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="ExecuteRule"
+            commandId="executeRuleCommand">
+      </handler>
+      <handler
+            class="ShowGraph"
+            commandId="ShowGraphCommand">
+      </handler>
+   </extension>
+   <extension
+         point="org.eclipse.ui.bindings">
+      <key
+            commandId="executeRuleCommand"
+            contextId="org.eclipse.ui.contexts.window"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="Ctrl+Shift+E">
+      </key>
+      <key
+            commandId="ShowGraphCommand"
+            contextId="org.eclipse.ui.contexts.window"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="Ctrl+Shift+S">
+      </key>
+   </extension>
+
+</plugin>

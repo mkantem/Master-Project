@@ -22,10 +22,16 @@
                id="VisualEditor.GraphTransformationmenu"
                label="G&amp;raphTransformation"
                path="additions">
+            <groupMarker
+                  name="content">
+            </groupMarker>
+            <separator
+                  name="additions">
+            </separator>
          </menu>
          <action
                class="ExecuteRuleActionDelagate"
-               icon="Normal/additions"
+               icon="src/Icon/run.GIF"
                id="VisualEditor.ExecuteRuleAction"
                label="E&amp;xecute Rule"
                menubarPath="VisualEditor.GraphTransformationmenu/content"
@@ -34,16 +40,8 @@
                tooltip="executer la règle de production séléctionnée sur le graphe hôte">
          </action>
          <action
-               class="LoadGraphActionDelegate"
-               id="VisualEditor.nouveauGraphhote"
-               label="new  Hote Graph"
-               menubarPath="VisualEditor.GraphTransformationmenu/content"
-               style="push"
-               toolbarPath="Normal/additions"
-               tooltip="charger le graphe hote sur lequel sera effectuer les transformations">
-         </action>
-         <action
-               icon="Normal/additions"
+               class="LoadGrammarAD"
+               icon="src/Icon/open.GIF"
                id="VisualEditor.chagerGramaire"
                label="Load Grammar"
                menubarPath="VisualEditor.GraphTransformationmenu/content"
@@ -68,17 +66,74 @@
       <wizard
             category="GraphTransformation"
             class="visualeditor.wizards.GraphNewWizard"
-            icon="icons/sample.gif"
+            icon="icon/graph.GIF"
             id="visualeditor.wizards.GraphNewWizard"
-            name="nouveau graphe">
+            name="new graph">
       </wizard>
       <wizard
             category="GraphTransformation"
             class="visualeditor.wizards.GrammarNewWizard"
-            icon="icons/sample.gif"
+            icon="icon/grammar.GIF"
             id="visualeditor.wizards.GrammarNewWizard"
             name="new grammar">
       </wizard>
+   </extension>
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            adaptable="true"
+            id="VisualEditor.popupMenu"
+            objectClass="visualeditor.PopmenuObjectone">
+         <action
+               class="visualeditor.VisualEditorAction1"
+               enablesFor="+"
+               id="VisualEditor.action1"
+               label="Add to Graph T"
+               menubarPath="additions"
+               tooltip="Add the selected resource(s) to the Graph Transformation view">
+         </action>
+         <action
+               class="visualeditor.Action1"
+               enablesFor="+"
+               id="VisualEditor.action1"
+               label="Add to Graph T"
+               menubarPath="additions"
+               tooltip="Add the selected resource(s) to the Graph Transformation view">
+         </action>
+         <action
+               class="visualeditor.Action1"
+               enablesFor="+"
+               id="VisualEditor.action1"
+               label="Add to Graph T"
+               tooltip="Add the selected resource(s) to the Graph Transformation view">
+         </action>
+         <action
+               class="visualeditor.Action1"
+               enablesFor="+"
+               id="VisualEditor.action1"
+               label="label"
+               tooltip="Add the selected resource(s) to the Graph Transformation view">
+         </action>
+         <action
+               class="visualeditor.Action1"
+               id="VisualEditor.action1"
+               label="label">
+         </action>
+      </objectContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            class="visualeditor.preferences.TransformationPreferencePage"
+            id="visualeditor.preferences.TransformationPreferencePage"
+            name="Graph Grammar">
+      </page>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.preferences">
+      <initializer
+            class="visualeditor.preferences.PreferenceInitializer">
+      </initializer>
    </extension>
 
 </plugin>

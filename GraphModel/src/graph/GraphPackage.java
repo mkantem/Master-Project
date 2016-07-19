@@ -6,6 +6,7 @@ import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
+import org.eclipse.emf.ecore.EStructuralFeature;
 
 /**
  * <!-- begin-user-doc -->
@@ -250,6 +251,18 @@ public interface GraphPackage extends EPackage {
 	int NODE__INGOING_EDGES = TYPED_FEATURE_COUNT + 2;
 
 	/**
+	 * The meta object id for the '{@link graph.impl.EdgeImpl <em>Edge</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see graph.impl.EdgeImpl
+	 * @see graph.impl.GraphPackageImpl#getEdge()
+	 * @generated
+	 */
+	int EDGE = 4;
+
+	int NODE__MARK = 0;
+
+	/**
 	 * The number of structural features of the '<em>Node</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -266,16 +279,6 @@ public interface GraphPackage extends EPackage {
 	 * @ordered
 	 */
 	int NODE_OPERATION_COUNT = TYPED_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link graph.impl.EdgeImpl <em>Edge</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see graph.impl.EdgeImpl
-	 * @see graph.impl.GraphPackageImpl#getEdge()
-	 * @generated
-	 */
-	int EDGE = 4;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -653,6 +656,14 @@ public interface GraphPackage extends EPackage {
 		 * @generated
 		 */
 		EReference EDGE__TARGET = eINSTANCE.getEdge_Target();
+
+		EStructuralFeature NODE__MARK = null;
+
+	
+
+		
+
+		
 
 	}
 

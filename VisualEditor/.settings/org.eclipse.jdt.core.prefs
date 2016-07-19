@@ -1,7 +1,116 @@
-eclipse.preferences.version=1
-org.eclipse.jdt.core.compiler.codegen.inlineJsrBytecode=enabled
-org.eclipse.jdt.core.compiler.codegen.targetPlatform=1.7
-org.eclipse.jdt.core.compiler.compliance=1.7
-org.eclipse.jdt.core.compiler.problem.assertIdentifier=error
-org.eclipse.jdt.core.compiler.problem.enumIdentifier=error
-org.eclipse.jdt.core.compiler.source=1.7
+import java.util.prefs.BackingStoreException;
+
+import org.eclipse.core.runtime.preferences.IEclipsePreferences;
+import org.eclipse.core.runtime.preferences.InstanceScope;
+import org.eclipse.jface.preference.BooleanFieldEditor;
+import org.eclipse.jface.preference.FieldEditorPreferencePage;
+import org.eclipse.jface.preference.StringFieldEditor;
+import org.eclipse.jface.resource.ImageDescriptor;
+import org.eclipse.ui.IWorkbench;
+import org.eclipse.ui.IWorkbenchPreferencePage;
+import org.osgi.service.prefs.Preferences;
+
+public class TransformationGraphPreferencePage extends FieldEditorPreferencePage implements IWorkbenchPreferencePage {
+	
+	
+	private IEclipsePreferences preferences;
+	private StringFieldEditor stringfield;
+
+	public TransformationGraphPreferencePage() {
+		preferences = InstanceScope.INSTANCE.getNode("VE.test");
+		
+	}
+
+	public TransformationGraphPreferencePage(int style) {
+		super(style);
+		// TODO Auto-generated constructor stub
+	}
+
+	public TransformationGraphPreferencePage(String title, int style) {
+		super(title, style);
+		// TODO Auto-generated constructor stub
+	}
+
+	public TransformationGraphPreferencePage(String title, ImageDescriptor image, int style) {
+		super(title, image, style);
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public void init(IWorkbench workbench) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	protected void createFieldEditors() {
+		
+			stringfield	=new StringFieldEditor("c","propriété C",getFieldEditorParent() );addField(stringfield);
+			
+
+	}
+
+	@Override
+	public boolean performOk() {
+		 Preferences sub1 = preferences.node("node1");
+		 sub1.put("h1",stringfield.getStringValue() );
+		try {
+		  // forces the application to save the preferences
+		  preferences.flush();
+		 
+		  } catch (org.osgi.service.prefs.BackingStoreException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return super.performOk();
+	}
+
+}
+**************************************************************************************************************************************************************
+
+***********************************************ViewPrefs**************************************************************************************
+
+import org.eclipse.core.internal.content.Activator;
+import org.eclipse.core.runtime.preferences.IEclipsePreferences;
+import org.eclipse.core.runtime.preferences.InstanceScope;
+import org.eclipse.jface.action.IAction;
+import org.eclipse.jface.preference.IPreferenceStore;
+import org.eclipse.jface.viewers.ISelection;
+import org.eclipse.ui.IWorkbenchWindow;
+import org.eclipse.ui.IWorkbenchWindowActionDelegate;
+import org.eclipse.ui.internal.UIPlugin;
+import org.osgi.service.prefs.Preferences;
+
+public class ViewPrefs implements IWorkbenchWindowActionDelegate {
+
+	private IEclipsePreferences preferences;
+
+	@Override
+	public void run(IAction action) {
+	
+		 preferences = InstanceScope.INSTANCE.getNode("VE.test");
+				 Preferences sub1 = preferences.node("node1");
+				System.out.println(sub1.get("h1", "default"));
+				
+         }
+
+	@Override
+	public void selectionChanged(IAction action, ISelection selection) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void dispose() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void init(IWorkbenchWindow window) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

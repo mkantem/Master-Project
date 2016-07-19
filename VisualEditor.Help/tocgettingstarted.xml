@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?NLS TYPE="org.eclipse.help.toc"?>
+
+<toc label="Getting Started" link_to="toc.xml#gettingstarted"> 
+	<topic label="Installation"  href="html/gettingstarted/installation.html"> 
+		<topic label="Graph Transformation View" href="html/gettingstarted/view.html"> 
+		<topic label="Graph" href="html/gettingstarted/graph.html"/>
+		<topic label="Grammar" href="html/gettingstarted/grammar.html"/>
+		</topic>
+	</topic>
+</toc>

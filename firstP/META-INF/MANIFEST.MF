@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: FirstP
+Bundle-SymbolicName: firstP;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: firstp.Activator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ GraphModel,
+ GraphGrammar,
+ org.eclipse.emf.ecore.xmi,
+ org.eclipse.ui.console
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ActivationPolicy: lazy

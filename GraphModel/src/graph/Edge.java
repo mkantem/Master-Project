@@ -10,12 +10,12 @@ package graph;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link graph.Edge#getParent <em>Parent</em>}</li>
  *   <li>{@link graph.Edge#getSource <em>Source</em>}</li>
  *   <li>{@link graph.Edge#getTarget <em>Target</em>}</li>
  * </ul>
- * </p>
  *
  * @see graph.GraphPackage#getEdge()
  * @model

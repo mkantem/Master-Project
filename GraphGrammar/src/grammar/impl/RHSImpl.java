@@ -25,11 +25,11 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link grammar.impl.RHSImpl#getParentRule <em>Parent Rule</em>}</li>
  *   <li>{@link grammar.impl.RHSImpl#getSubGraph <em>Sub Graph</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -253,6 +253,14 @@ public class RHSImpl extends MinimalEObjectImpl.Container implements RHS {
 				return subGraph != null;
 		}
 		return super.eIsSet(featureID);
+	}
+	public String toString() 
+	{
+		
+		StringBuffer buffer= new StringBuffer(); 	// TODO Auto-generated method stub
+		//buffer.append(this.subGraph);
+		 buffer.append("{"+this.subGraph.getNodes()+" , "+this.subGraph.getEdges()+"}");
+		return buffer.toString();
 	}
 
 } //RHSImpl

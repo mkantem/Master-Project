@@ -26,6 +26,7 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link grammar.impl.RuleImpl#getParentGrammar <em>Parent Grammar</em>}</li>
  *   <li>{@link grammar.impl.RuleImpl#getLhs <em>Lhs</em>}</li>
@@ -34,7 +35,6 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  *   <li>{@link grammar.impl.RuleImpl#getPriority <em>Priority</em>}</li>
  *   <li>{@link grammar.impl.RuleImpl#getEmbeddingMechanism <em>Embedding Mechanism</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -48,7 +48,10 @@ public class RuleImpl extends MinimalEObjectImpl.Container implements Rule {
 	 * @ordered
 	 */
 	protected LHS lhs;
-
+	private int marker = 0; //pour marquer une règle
+	public  void unMarkRule(){marker=1;}
+	public  void zeroMarkRule(){marker=0;}
+	public  int Mark(){return marker;}
 	/**
 	 * The cached value of the '{@link #getRhs() <em>Rhs</em>}' containment reference.
 	 * <!-- begin-user-doc -->

@@ -13,12 +13,12 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link grammar.ConnexionInstruction#getParentEmbedding <em>Parent Embedding</em>}</li>
  *   <li>{@link grammar.ConnexionInstruction#getM <em>M</em>}</li>
  *   <li>{@link grammar.ConnexionInstruction#getD <em>D</em>}</li>
  * </ul>
- * </p>
  *
  * @see grammar.GrammarPackage#getConnexionInstruction()
  * @model

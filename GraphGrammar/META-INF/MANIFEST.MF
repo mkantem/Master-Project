@@ -11,6 +11,6 @@ Export-Package: grammar,
  grammar.impl,
  grammar.util
 Require-Bundle: org.eclipse.core.runtime,
- org.eclipse.emf.ecore,
+ org.eclipse.emf.ecore;visibility:=reexport,
  GraphModel;visibility:=reexport
 Bundle-ActivationPolicy: lazy

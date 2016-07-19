@@ -25,11 +25,11 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link graph.impl.GraphImpl#getNodes <em>Nodes</em>}</li>
  *   <li>{@link graph.impl.GraphImpl#getEdges <em>Edges</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -85,11 +85,6 @@ public class GraphImpl extends NamedImpl implements Graph {
 		return nodes;
 	}
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EList<Edge> getEdges() {
 		if (edges == null) {
 			edges = new EObjectContainmentWithInverseEList<Edge>(Edge.class, this, GraphPackage.GRAPH__EDGES, GraphPackage.EDGE__PARENT);
@@ -203,10 +198,10 @@ public class GraphImpl extends NamedImpl implements Graph {
 
 	@Override
 	public String toString() {
-	StringBuffer buffer= new StringBuffer(); 	// TODO Auto-generated method stub
-    buffer.append("{"+this.getNodes().toString()+" , "+this.getEdges().toString()+"}");
-	
-	return buffer.toString();
-	}
+		StringBuffer buffer= new StringBuffer(); 	// TODO Auto-generated method stub
+	    buffer.append("{"+this.getNodes().toString()+" , "+this.getEdges().toString()+"}");
+		
+		return buffer.toString();
+		}
 
 } //GraphImpl

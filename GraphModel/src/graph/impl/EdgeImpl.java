@@ -23,12 +23,12 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link graph.impl.EdgeImpl#getParent <em>Parent</em>}</li>
  *   <li>{@link graph.impl.EdgeImpl#getSource <em>Source</em>}</li>
  *   <li>{@link graph.impl.EdgeImpl#getTarget <em>Target</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

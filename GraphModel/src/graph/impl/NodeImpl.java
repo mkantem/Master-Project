@@ -29,16 +29,37 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link graph.impl.NodeImpl#getParent <em>Parent</em>}</li>
  *   <li>{@link graph.impl.NodeImpl#getOutgoingEdges <em>Outgoing Edges</em>}</li>
  *   <li>{@link graph.impl.NodeImpl#getIngoingEdges <em>Ingoing Edges</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
 public class NodeImpl extends TypedImpl implements Node {
+	private int marker = 0;
+	
+	public  void markNode(){marker=1;}
+	public  void unMarkNode(){marker=0;}
+	public  int Mark(){return marker;}
+	
+	@Override
+	public boolean equals(Object o) {
+		if(! (o instanceof Node) ) return false;
+		Node n =(Node)o;
+		if(n==null)return false;
+		else
+		{
+			if(n.getName()==null) return false;
+			
+			return n.getName().equals(this.getName());
+		}
+		
+		
+	}
+
 	/**
 	 * The cached value of the '{@link #getOutgoingEdges() <em>Outgoing Edges</em>}' reference list.
 	 * <!-- begin-user-doc -->

@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Graph-Grammar--plugins
+Bundle-SymbolicName: Graph-Grammar--plugins;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: graph_grammar__plugins.Activator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ GraphModel;bundle-version="0.1.0",
+ GraphGrammar;bundle-version="0.1.0",
+ org.eclipse.emf.common,
+ org.eclipse.emf.ecore,
+ org.eclipse.emf.ecore.xmi
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ActivationPolicy: lazy

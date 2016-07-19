@@ -13,11 +13,11 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link grammar.LHS#getParentRule <em>Parent Rule</em>}</li>
  *   <li>{@link grammar.LHS#getNode <em>Node</em>}</li>
  * </ul>
- * </p>
  *
  * @see grammar.GrammarPackage#getLHS()
  * @model
