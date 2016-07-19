@@ -1,15 +1,15 @@
 # Master-Project
-Ce projet consiste à mettre en place un plugin Eclipse pour effectuer des transformations (basées sur une approche algébrique ) sur des graphes exprimés sous forme de modèle EMF 
+This project will develop an Eclipse plugin for performing transformations (based on an algebraic approach) on graphs expressed as EMF model 
 >#### Eclipse Modeling Framework (EMF) 
-Plateforme qui exploite les facilités d’Eclipse pour fournir un outillage puissant et de manipulation des modèles et de génération automatique des environnements de modélisation appropriés à des domaines spécifiques. 
-#### _Graphe_ 
-Une transformation sur ce dernier implique .....
->>#### _Grammaire de graphe_
-Une grammaire de graphe fournit un mécanisme dans lequel les transformations
-locales sur un graphe peuvent être modélisés d’une façon mathématiquement
-précise. Cette grammaire est principalement un ensemble ﬁni de
-productions ; une production est, en général, un triplet (M, D, E) où M et D
-(Mother pour M, Daughter pour D) sont des graphes et E est un ensemble
-de mécanisme(règles) de connexion.
+Platform that use Eclipse facilities to provide a powerful tool and manipulation of models and automatic generation of appropriate modeling environments in specific areas.
+#### _Graph_ 
+A transformation on it involve .....
+>>#### _Graph Grammar_
+A graph grammar provides a mechanism wherein the transformations
+local on a graph can be modeled in a mathematically
+precise way. This grammar is mainly a finite set of
+productions; production is generally a triplet (M, D, E) where M and D
+(Mother & Daughter) are graphs and E is a set
+mechanism (rules) connection.
 ## **2015/2016**
 
